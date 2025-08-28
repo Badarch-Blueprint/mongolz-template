@@ -1,0 +1,193 @@
+<div class="container mx-auto py-10">
+    <div class="absolute top-0 left-0 w-full">
+        <img src="assets/images/banner.avif" alt="" class="w-full h-[800px] object-cover z-10">
+        <div class="absolute z-20 banner-shadow w-full top-0 left-0 h-[800px] flex items-center justify-start text-white font-bold ps-20 text-2xl">
+            <div class="">
+                <div id="firstText" class="text-primary text-8xl">MongolZ</div> 
+                <div id="secondText" class="text-3xl">
+                    <span class="text-nowrap font-comfortaa font-extrabold">eSport team</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid grid-cols-12 gap-x-4 gap-y-20 pt-[800px]">
+        <div class="col-span-12 grid grid-cols-12 uppercase text-primary text-2xl font-bold">
+            <div class="relative col-span-4" *ngFor="let game of games">
+                <img [src]="game.banner" alt="" class="w-full">
+                <div class="w-full h-full absolute top-0 left-0 banner-shadow flex items-center justify-center">
+                    <span>{{game.title}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-span-12 flex flex-col gap-y-6">
+            <div class="flex flex-col">
+                <span class="font-comfortaa text-xs text-white">Counter-Strike 2</span>
+                <span class="uppercase text-white text-4xl font-semibold">team <span class="text-primary">cs2</span></span>
+            </div>
+            <div class="w-full px-10 py-6 bg-primary/90" *ngFor="let player of players">
+                <div class="flex flex-row justify-between items-center">
+                    <div class="flex flex-row gap-x-10 items-center">
+                        <div>
+                            <img [src]="player.image" alt="" class="w-20 bg-white/40 rounded-full">
+                        </div>
+                        <div class="flex flex-col text-lg">
+                            <span>{{player.firstName}} <span class="font-bold normal-case">"{{player.ign}}"</span> {{player.lastName}}</span>
+                            <span class="text-xs text-black/60">{{player.role}}</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-row gap-x-2">
+                        <div class="col-span-6">
+                            HLTV
+                        </div>
+                        <div class="col-span-6">
+                            IG
+                        </div>
+                        <div class="col-span-6">
+                            FB
+                        </div>
+                        <div class="col-span-6">
+                            VK
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-span-12 flex flex-col gap-y-6">
+            <span class="uppercase text-white text-4xl font-semibold">team <span class="text-primary">STATISTIC</span></span>
+
+
+            <div class="bg-primary/90 hover:bg-primary cursor-pointer transition-all w-auto px-10 py-6 mx-20 flex flex-col">
+                <div class="flex flex-row items-center justify-between relative">
+                    <div class="flex flex-row items-center gap-x-6">
+                        <img src="assets/images/mongolz.png" alt="" class="h-20 rounded-full">
+                        <!-- <div class="uppercase text-4xl font-bold">
+                            vs
+                        </div> -->
+                        <div class="flex flex-row items-center gap-x-4 text-3xl font-bold">
+                            <span class="text-black">-</span>
+                            <span>:</span>
+                            <span class="text-black">-</span>
+                        </div>
+                        <img src="assets/images/flyquest.webp" alt="" class="h-20">
+                        
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <div class="flex flex-row text-xs">
+                            8th of August 2024
+                        </div>
+                        <div class="text-xs text-blue-800">
+                            IEM Cologne
+                        </div>
+                        <div class="text-2xl font-montserat font-bold">
+                            19:30
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row -right-11 relative">
+                        <div class="-my-6 relative">
+                            <img src="assets/images/anubis.webp" alt="" class="h-32">
+                            <div class="absolute map-shadow w-full h-full top-0 left-0 flex items-center justify-center flex-col gap-y-2 px-10">
+                                <div class="text-xs uppercase font-thin font-comfortaa bg-white/20 w-full py-1.5 text-white text-center">map 1</div>
+                                <div class="flex flex-row gap-x-4 text-3xl font-bold font-montserat">
+                                    <span class="text-white">?</span>
+                                    <span class="text-white">:</span>
+                                    <span class="text-white">?</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="-my-6 relative">
+                            <img src="assets/images/ancient.webp" alt="" class="h-32">
+                            <div class="absolute map-shadow w-full h-full top-0 left-0 flex items-center justify-center flex-col gap-y-2 px-10">
+                                <div class="text-xs uppercase font-thin font-comfortaa bg-white/20 w-full py-1.5 text-white text-center">map 2</div>
+                                <div class="flex flex-row gap-x-4 text-3xl font-bold font-montserat">
+                                    <span class="text-white">?</span>
+                                    <span class="text-white">:</span>
+                                    <span class="text-white">?</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="-my-6 relative">
+                            <img src="assets/images/dust2.webp" alt="" class="h-32">
+                            <div class="absolute map-shadow w-full h-full top-0 left-0 flex items-center justify-center flex-col gap-y-2 px-10">
+                                <div class="text-xs uppercase font-thin font-comfortaa bg-white/20 w-full py-1.5 text-white text-center">map 3</div>
+                                <div class="flex flex-row gap-x-4 text-3xl font-bold font-montserat">
+                                    <span class="text-white">?</span>
+                                    <span class="text-white">:</span>
+                                    <span class="text-white">?</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-primary/90 hover:bg-primary cursor-pointer transition-all w-auto px-10 py-6 mx-20 flex flex-col h-32">
+                <div class="flex flex-row items-center justify-between relative">
+                    <div class="flex flex-row items-center gap-x-6">
+                        <img src="assets/images/mongolz.png" alt="" class="h-20 rounded-full">
+                        <!-- <div class="uppercase text-4xl font-bold">
+                            vs
+                        </div> -->
+                        <div class="flex flex-row items-center gap-x-4 text-3xl font-bold">
+                            <span class="text-red-500">1</span>
+                            <span>:</span>
+                            <span class="text-green-500">2</span>
+                        </div>
+                        <img src="assets/images/saw.webp" alt="" class="h-20">
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <div class="flex flex-row text-xs">
+                            8th of August 2024
+                        </div>
+                        <div class="text-xs text-blue-800">
+                            IEM Cologne
+                        </div>
+                        <div class="text-2xl font-montserat font-bold">
+                            19:30
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row -right-11 relative">
+                        <div class="-my-6 relative">
+                            <img src="assets/images/anubis.webp" alt="" class="h-32">
+                            <div class="absolute map-shadow w-full h-full top-0 left-0 flex items-center justify-center flex-col gap-y-2 px-10">
+                                <div class="text-xs uppercase font-thin font-comfortaa bg-white/20 w-full py-1.5 text-white text-center">anubis</div>
+                                <div class="flex flex-row gap-x-4 text-3xl font-bold font-montserat">
+                                    <span class="text-red-500">13</span>
+                                    <span class="text-white">:</span>
+                                    <span class="text-green-500">16</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="-my-6 relative">
+                            <img src="assets/images/ancient.webp" alt="" class="h-32">
+                            <div class="absolute map-shadow w-full h-full top-0 left-0 flex items-center justify-center flex-col gap-y-2 px-10">
+                                <div class="text-xs uppercase font-thin font-comfortaa bg-white/20 w-full py-1.5 text-white text-center">ancient</div>
+                                <div class="flex flex-row gap-x-4 text-3xl font-bold font-montserat">
+                                    <span class="text-green-500">13</span>
+                                    <span class="text-white">:</span>
+                                    <span class="text-red-500">5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="-my-6 relative">
+                            <img src="assets/images/dust2.webp" alt="" class="h-32">
+                            <div class="absolute map-shadow w-full h-full top-0 left-0 flex items-center justify-center flex-col gap-y-2 px-10">
+                                <div class="text-xs uppercase font-thin font-comfortaa bg-white/20 w-full py-1.5 text-white text-center">dust2</div>
+                                <div class="flex flex-row gap-x-4 text-3xl font-bold font-montserat">
+                                    <span class="text-green-500">5</span>
+                                    <span class="text-white">:</span>
+                                    <span class="text-red-500">13</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

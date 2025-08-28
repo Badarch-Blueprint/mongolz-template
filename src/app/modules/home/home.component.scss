@@ -1,0 +1,60 @@
+.banner-shadow {
+    -webkit-box-shadow: inset 0px -250px 400px 20px rgba($color: #050404, $alpha: 1);    
+    -moz-box-shadow: inset 0px -250px 400px 20px rgba($color: #050404, $alpha: 1);
+    box-shadow: inset 0px -250px 400px 20px rgba($color: #050404, $alpha: 1);
+}
+
+.map-shadow {
+    -webkit-box-shadow: inset 0px -80px 120px 10px rgba($color: #050404, $alpha: 1);    
+    -moz-box-shadow: inset 0px -80px 120px 10px rgba($color: #050404, $alpha: 1);
+    box-shadow: inset 0px -80px 120px 10px rgba($color: #050404, $alpha: 1);
+}
+
+#firstText {    /* For increasing performance 
+    ID/Class should've been used. 
+    For a small demo 
+    it's okaish for now */
+    animation: showup 7s infinite;
+}
+
+#secondText {
+    width:0px;
+    animation: reveal 7s infinite;
+}
+
+#secondText span {
+    margin-left:-355px;
+    animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+
+.nameless-container {
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
+
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translate3d(0,0,0);
+}

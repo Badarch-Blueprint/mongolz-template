@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+
+@use '@angular/material' as mat;
+@use "sass:map";
+
+@include mat.core();
+
+$accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$warn: mat.define-palette(mat.$red-palette);
+
+$primary-palette: (
+    50 : #fdf8ed,
+    100 : #faeed1,
+    200 : #f7e2b3,
+    300 : #f4d695,
+    400 : #f1ce7e,
+    500 : #efc567,
+    600 : #edbf5f,
+    700 : #ebb854,
+    800 : #e8b04a,
+    900 : #e4a339,
+    A100 : #ffffff,
+    A200 : #fffdfb,
+    A400 : #ffe9c8,
+    A700 : #ffdfae,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$ajlymn-primary: mat.define-palette($primary-palette);
+
+$theme: mat.define-light-theme((
+  color: (
+    primary: $ajlymn-primary,
+    accent: $accent,
+    warn: $warn,
+  )
+));
+
+@include mat.all-component-themes($theme);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body { height: 100%; }
+
+html {
+    background-color: #050404FF;
+}
+
+body { margin: 0; font-family: Poppins, "Poppins", sans-serif; padding: 0; }
