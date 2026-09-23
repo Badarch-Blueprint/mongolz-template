@@ -22,6 +22,6 @@ import { JwtStrategy } from './jwt.strategy.js';
   ],
   controllers: [AuthController],
   providers: [AuthService, JwtStrategy],
-  exports: [PassportModule],  // <- энэ мөрийг нэмж, JwtAuthGuard бусад модульд ашиглах боломжтой болгоно
+  exports: [PassportModule], // <- энэ мөрийг нэмж, JwtAuthGuard бусад модульд ашиглах боломжтой болгоно
 })
 export class AuthModule {}

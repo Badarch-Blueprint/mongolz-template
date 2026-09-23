@@ -18,10 +18,10 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   }
 
   async validate(payload: any) {
-  const user = await this.userService.findById(payload.sub);
-  if (!user || user.tokenVersion !== payload.tokenVersion) {
-    throw new UnauthorizedException('Token хvчингvй болсон байна');
+    const user = await this.userService.findById(payload.sub);
+    if (!user || user.tokenVersion !== payload.tokenVersion) {
+      throw new UnauthorizedException('Token хvчингvй болсон байна');
+    }
+    return payload;
   }
-  return payload;
-}
 }
