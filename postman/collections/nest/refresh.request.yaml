@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:3000/auth/refresh
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"refreshToken\":\"{{json_web_token_0j7n}}\"\r
+
+    }"
+order: 4261618518699287
